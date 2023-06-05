@@ -6,7 +6,7 @@
 
 It is a simple HTML with some CSS and JavaScript that
 
-- Receives an input from the user (Amount of tips) (**Required**)
+- Receives a total value (amount of tips) from the user (**Required**)
 - Allocate part of said total for the kitchen (*10% default*)
 - Adds or removes employees
 - Divide whats left of tips (after kitchen allocation) between all employees *proportional to work hours*
