@@ -82,9 +82,15 @@ addPersonBtn.addEventListener("click", () => {
     const listItem = document.createElement("li");
     listItem.innerHTML = `
       <div class="person-item">
-        <span class="person-name">${personName}</span> - 
-        <span class="hours-worked">${hoursWorked}</span> hours
-        <button class="remove-person-btn btn btn-danger ml-auto">Remove</button>
+        <div class="row align-items-center">
+          <div class="col">
+            <span class="person-name">${personName}</span> - 
+            <span class="hours-worked">${hoursWorked}</span> hours
+          </div>
+          <div class="col-auto">
+            <button class="remove-person-btn btn btn-danger">Remove</button>
+          </div>
+        </div>
       </div>
     `;
     document.getElementById("person_list").appendChild(listItem);
