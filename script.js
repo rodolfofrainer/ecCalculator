@@ -91,6 +91,11 @@ addPersonBtn.addEventListener("click", () => {
 
     personNameInput.value = "";
     hoursWorkedInput.value = "";
+
+    const removeButton = listItem.querySelector(".remove-person-btn");
+    removeButton.addEventListener("click", () => {
+      listItem.remove();
+    });
   }
 });
 
