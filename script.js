@@ -26,7 +26,7 @@ calculateBtn.addEventListener("click", () => {
   personValuePerHourEl.textContent = `Average Value per Hour: $${valuePerHour}`;
 
   // Show the modal
-  $('#resultsModal').modal('show');
+  $("#resultsModal").modal("show");
 });
 
 // Function to calculate the person shares
@@ -75,7 +75,7 @@ function calculateAverageValuePerHour(personShares) {
 addPersonBtn.addEventListener("click", () => {
   const personNameInput = document.querySelector(".person-name");
   const hoursWorkedInput = document.querySelector(".hours-worked");
-  const personName = personNameInput.value.trim();
+  const personName = capitalizeFirstLetter(personNameInput.value.trim());
   const hoursWorked = hoursWorkedInput.value.trim();
 
   if (personName !== "" && hoursWorked !== "") {
@@ -84,7 +84,7 @@ addPersonBtn.addEventListener("click", () => {
       <div class="person-item">
         <span class="person-name">${personName}</span> - 
         <span class="hours-worked">${hoursWorked}</span> hours
-        <button class="remove-person-btn btn btn-danger">Remove</button>
+        <button class="remove-person-btn btn btn-danger ml-auto">Remove</button>
       </div>
     `;
     document.getElementById("person_list").appendChild(listItem);
@@ -108,3 +108,8 @@ document.querySelectorAll(".kitchen-percentage-btn").forEach((btn) => {
     btn.classList.add("active");
   });
 });
+
+// Function to capitalize the first letter of a string
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}

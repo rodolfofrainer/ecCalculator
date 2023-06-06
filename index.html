@@ -16,7 +16,7 @@
 
       <div class="input-container">
         <label for="total_tips">Total:</label>
-        <input value="0" type="number" id="total_tips" autofocus />
+        <input value="0" type="number" id="total_tips" min="0" autofocus />
       </div>
 
       <div class="input-container text-center">
@@ -58,6 +58,8 @@
           type="number"
           class="hours-worked mt-1"
           placeholder="Hours worked"
+          min="0"
+          value="0"
         />
         <button id="add_person_btn" class="btn btn-primary">Add Person</button>
       </div>
